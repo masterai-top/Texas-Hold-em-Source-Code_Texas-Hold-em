@@ -1,4 +1,6 @@
 # Texas-Hold-em-Source-Code_Texas-Hold-em
+Texas Hold'em source code, Texas Hold'em poker source code, Texas Hold'em game source code
+
 德州源码，德州扑克源码，德州游戏源码，有私人局+俱乐部+联盟+经典德州+短牌+大菠萝+奥玛哈+AOF+MTT+SNG+牛仔，德州原始碼，德州撲克原始碼，德州遊戲原始碼，包含私人局+俱樂部+聯盟+經典德州+短牌+大菠蘿+奧瑪哈+AOF+MTT+SNG+牛仔；TG：@xuzongbin001
 ![牌桌4](https://github.com/user-attachments/assets/68743bf6-71ab-4b89-bf77-d1291cf2962b)
 ![牌谱记录2](https://github.com/user-attachments/assets/2287380c-a6dc-430a-8313-cacbb3623ccc)
