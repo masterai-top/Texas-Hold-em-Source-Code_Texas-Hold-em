@@ -54,8 +54,6 @@
 ## 📸 界面预览
 
 
-| 游戏大厅 | 牌桌对战 | 俱乐部界面 |
-| :---: | :---: | :---: |
 ![牌桌4](https://github.com/user-attachments/assets/68743bf6-71ab-4b89-bf77-d1291cf2962b)
 ![牌谱记录2](https://github.com/user-attachments/assets/2287380c-a6dc-430a-8313-cacbb3623ccc)
 ![牌谱记录1](https://github.com/user-attachments/assets/63aba89b-63b1-4207-a273-716945128aa9)
