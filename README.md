@@ -1,14 +1,20 @@
-# 🎰 德州源码 | 德州游戏|德州扑克源码|德州扑克完整运营源码 | 私人局+俱乐部+联盟 | 10+种玩法|德州游戏源码|Mã nguồn Poker
+[简体中文](README.md) | [繁體中文](README.zh-TW.md) | [English](README.en.md)
+
+# 多玩法德州扑克客户端与服务端项目|德州源码 | 德州游戏
 
 > **经典德州/短牌/大菠萝/奥马哈/AOF/MTT/SNG/牛仔 | H5+Web双端**
+
 
 [![Contact](https://img.shields.io/badge/联系-TG%3A%40xuzongbin001-blue)](https://t.me/xuzongbin001)
 [![Platform](https://img.shields.io/badge/平台-H5%20%7C%20Web%20%7C%20App-green)]()
 [![Language](https://img.shields.io/badge/服务端-C%2B%2B-red)]()
 
+
 ---
 
+
 ## ✨ 核心特色
+
 
 | 特色模块 | 说明 |
 | :--- | :--- |
@@ -19,7 +25,9 @@
 | 📱 **多端支持** | H5 + Web + App |
 | 🌍 **多语言** | 支持多国语言 |
 
+
 ## 🎯 玩法清单
+
 
 | 玩法 | 说明 |
 | :--- | :--- |
@@ -32,7 +40,9 @@
 | ⚡ **SNG** | 坐满即玩 |
 | 🤠 **德州牛仔** | 特殊玩法 |
 
+
 ## 🚀 技术架构
+
 
 | 层级 | 技术 |
 | :--- | :--- |
@@ -40,7 +50,9 @@
 | **客户端** | H5 / Web |
 | **数据库** | MySQL + Redis |
 
+
 ## 📸 界面预览
+
 
 | 游戏大厅 | 牌桌对战 | 俱乐部界面 |
 | :---: | :---: | :---: |
@@ -52,23 +64,29 @@
 ![俱乐部-牌桌形式](https://github.com/user-attachments/assets/17aeb8bf-bc17-4a78-8cc3-4b3715ffc16f)
 
 
-> 📷 截图正在整理中，联系我可获取最新演示视频和截图
+
+
 
 🎥 **演示视频**：[联系我获取在线演示](https://t.me/xuzongbin001)
 
+
 ## 💰 获取源码
+
 
 ✅ 完整C++服务端源码  
 ✅ 完整H5/Web客户端源码  
 ✅ 数据库脚本  
 ✅ 部署文档  
 
+
 📱 **Telegram：@xuzongbin001**  
 📧 **Email：masterai918@gmail.com**
 
-👉 **联系我获取演示站**
+
+
+
 
 ---
 
-⭐ Star 这个仓库，支持优质德州源码持续分享！
 
+⭐ Star 这个仓库，支持优质德州源码持续分享！
