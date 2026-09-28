@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://masterai-top.github.io/Texas-Hold-em-Source-Code_Texas-Hold-em/sitemap.xml
+

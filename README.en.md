@@ -1,89 +1,63 @@
-[简体中文](README.md) | [繁體中文](README.zh-TW.md) | [English](README.en.md)
+[简体中文](README.md) | [繁體中文](README.zh-TW.md) | [English](README.en.md) | [Visual site](https://masterai-top.github.io/Texas-Hold-em-Source-Code_Texas-Hold-em/en/)
 
-# Multi-Variant Texas Holdem Client and Server Project
+# Texas Holdem Source Code: C++ Server and TypeScript Client
 
-> **Classic Texas Hold'em / Short Deck / Pineapple / Omaha / AOF / MTT / SNG / Cowboy | H5 + Web Dual-Platform Support**
+This repository documents code-level parts of a multiplayer Texas Holdem project: the **game-round core, room messaging bridge, club handlers, and client message layer**. The description is grounded in the files present in the repository instead of presenting it as an undifferentiated complete platform.
 
+[![C++](https://img.shields.io/badge/server-C%2B%2B-9f2e3c)](./gameserver.cpp)
+[![TypeScript](https://img.shields.io/badge/client-TypeScript-086b58)](./MsgHandlerModel.ts)
+[![Tars](https://img.shields.io/badge/service-Tars-d5ab3d)](./utils/tarslog.h)
+[![Contact](https://img.shields.io/badge/Telegram-%40xuzongbin001-1687a7)](https://t.me/xuzongbin001)
 
-[![Contact](https://img.shields.io/badge/联系-TG%3A%40xuzongbin001-blue)](https://t.me/xuzongbin001)
-[![Platform](https://img.shields.io/badge/平台-H5%20%7C%20Web%20%7C%20App-green)]()
-[![Language](https://img.shields.io/badge/服务端-C%2B%2B-red)]()
+## Distinct repository focus
 
+Unlike the complete-solution, club-platform, tournament, and CFR AI repositories under `masterai-top`, this project focuses on the implementation layer.
 
----
+| Area | Evidence in this repository |
+| --- | --- |
+| Round lifecycle | `core/gamebegin.h`, `core/gamecalculate.h`, `core/gameend.h` |
+| Timers and card delivery | `core/begintimer.h`, `core/endtimer.h`, `core/sendhdcard.h` |
+| Room messaging | `gameserver.cpp`, `onclientmessage.cpp`, `sendclientmessage.cpp` |
+| Client messaging | `MsgHandlerModel.ts`, `EventBind.ts`, `EventDefine.ts` |
+| Club handlers | `create_club.h`, `change_position_club.h`, `check_cut_club.h` |
+| Protocol and service layer | Tars, Protobuf, asynchronous sockets, and a third-party TCP client |
 
+## Game flow
 
-## ✨ Core Features
+1. The client message model handles lobby room lists, table entry, and reconnection-related events.
+2. `gameconfig.cpp` loads room type, seats, blinds, action timers, and round settings.
+3. The game core checks start conditions and advances through timers, card delivery, and player actions.
+4. Calculation and end modules produce the result and send completion data to the room and clients.
 
+## Visible product capabilities
 
-| Feature Module | Description |
-| :--- | :--- |
-| 👥 **Private Games** | Games with friends, private rooms |
-| 🏆 **Clubs** | Comprehensive club system |
-| 🤝 **Leagues** | Major league mode, multi-club integration |
-| 🎮 **10+ Game Modes** | Classic Texas / Short Deck / Pineapple / Omaha / AOF / MTT / SNG / Cowboy |
-| 📱 **Multi-Platform** | H5 + Web + App |
-| 🌍 **Multi-Language** | Supports multiple languages ​​|
+- Table controls for fold, call, check, and raise
+- Hand-history list and street-by-street detail
+- In-table chat and hand information
+- Club creation and club table browsing
+- Entry points for Holdem, All-in or Fold, and 6+ Short Deck
+- MTT and SNG entry points; TypeScript files include MTT room events and status definitions
 
+## Technical map
 
-## 🎯 Game Modes
+| Layer | Repository content |
+| --- | --- |
+| C++ game service | `GameRoot`, `GameServer`, round lifecycle, timers, settlement, and room data exchange |
+| TypeScript client modules | startup, loading, event binding, message encoding/decoding, lobby and room state |
+| Communication | Tars interfaces, Protobuf messages, asynchronous sockets, third-party TCP client |
+| Club operations | create club, change position, and club configuration checks |
 
+## Product screenshots
 
-| Game Mode | Description |
-| :--- | :--- |
-| ♠️ **Classic Texas** | Standard Texas Hold'em rules |
-| 🃏 **Short Deck** | 6+ Hold'em (cards 2-5 removed) |
-| 🍍 **Pineapple** | Variant of Chinese Poker (13 Cards) |
-| ♣️ **Omaha** | Four hole cards; two must be used |
-| 🎯 **AOF** | All-in or Fold (fast-paced) |
-| 🏅 **MTT** | Multi-Table Tournament |
-| ⚡ **SNG** | Sit & Go |
-| 🤠 **Texas Cowboy** | Special game mode |
+| Table and chat | Hand history |
+| --- | --- |
+| ![Texas Holdem table chat and hand detail](docs/assets/images/table-chat.jpg) | ![Texas Holdem hand history detail](docs/assets/images/hand-history-detail.jpg) |
+| Club tables | Create club |
+| ![Poker club tables with AOF and Short Deck](docs/assets/images/club-table-list.jpg) | ![Create a poker club](docs/assets/images/create-club.jpg) |
 
+## Contact
 
-## 🚀 Technical Architecture
+- Telegram: [@xuzongbin001](https://t.me/xuzongbin001)
+- Email: [masterai918@gmail.com](mailto:masterai918@gmail.com)
 
-
-| Layer | Technology |
-| :--- | :--- |
-| **Server-side** | C++ (High Performance)
-|
-| **Client** | H5 / Web |
-| **Database** | MySQL + Redis |
-
-
-## 📸 Interface Preview
-
-
-![牌桌4](https://github.com/user-attachments/assets/68743bf6-71ab-4b89-bf77-d1291cf2962b)
-![牌谱记录2](https://github.com/user-attachments/assets/2287380c-a6dc-430a-8313-cacbb3623ccc)
-![牌谱记录1](https://github.com/user-attachments/assets/63aba89b-63b1-4207-a273-716945128aa9)
-![聊天](https://github.com/user-attachments/assets/6fdb6da3-d5f2-49d3-a0c2-d1939d28f9c4)
-![创建俱乐部](https://github.com/user-attachments/assets/982f8979-5688-4e11-a263-2b70d9a86258)
-![俱乐部-牌桌形式](https://github.com/user-attachments/assets/17aeb8bf-bc17-4a78-8cc3-4b3715ffc16f)
-
-
-
-🎥 **Demo Video**: [Contact me for an online demo](https://t.me/xuzongbin001)
-
-
-## 💰 Get the Source Code
-
-
-✅ Complete C++ server-side source code
-✅ Complete H5/Web client-side source code
-✅ Database scripts
-✅ Deployment documentation
-
-
-📱 **Telegram: @xuzongbin001**
-📧 **Email: masterai918@gmail.com**
-
-
-
-
-
----
-
-
-⭐ Star this repository to support the continued sharing of high-quality Texas Hold'em source code!
+The exact delivery scope, dependencies, and buildability should be confirmed against a written source manifest. This repository is intended for lawful software evaluation, technical research, and licensed project discussions.
